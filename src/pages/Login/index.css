@@ -1,0 +1,36 @@
+.loginCard {
+  width: 25%;
+  margin: auto;
+  margin-top: 200px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+
+.radioGroup {
+  display: flex;
+  direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
