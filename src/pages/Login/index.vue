@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <el-card class="loginCard">
       <div slot="header" class="clearfix radioGroup">
         <el-radio-group v-model="radioValue" class="radioGroup" text-color="#fed71a" fill="#000" radioValue>
@@ -16,14 +16,13 @@
         <el-input placeholder="请输入用户名" prefix-icon="el-icon-user" style="margin-bottom:30px;" v-model="username"></el-input>
         <el-input placeholder="请输入密码" prefix-icon="el-icon-lock" style="margin-bottom:30px;" v-model="password" show-password></el-input>
         <el-input placeholder="请确认密码" prefix-icon="el-icon-lock" style="margin-bottom:30px;" v-model="passwordRight" show-password></el-input>
-        <el-button type="info" round style="width: 200px; text-align: center;" @click="register('ruleForm')">注册</el-button>
+        <el-button type="info" round style="width: 200px; text-align: center;" @click="register()">注册</el-button>
       </div>
     </el-card>
   </div>
 </template>
 
 <script>
-import "./index.css"
 import axios from 'axios';
 export default {
   data() {
@@ -91,10 +90,15 @@ export default {
             this.userID = response.data.data.userID;
             // 将本地存储中的userID设置为响应中的id
             localStorage.setItem('userID', this.userID);
+            this.$router.push({ path: '/home' });
             this.$message({
               message: '登录成功',
               type: 'success'
-            })
+            });
+            // 登录成功后跳转到首页
+            /* setTimeout(function () {
+              this.$router.push({ path: '/home' });
+            }.bind(this), 1000); */
           }
         }).catch(error => {
           console.error(error);
@@ -115,4 +119,4 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped src="./index.css"></style>

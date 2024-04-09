@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <Login></Login>
+    <!-- 路由文件入口 -->
+    <router-view></router-view>
+    <!-- <Login></Login> -->
   </div>
 </template>
 
 <script>
-import Login from './pages/Login'
+// import Login from './pages/Login'
 
 export default {
   name: 'App',
-  components: {
+  /* components: {
     Login
-  }
+  } */
 }
 </script>
 

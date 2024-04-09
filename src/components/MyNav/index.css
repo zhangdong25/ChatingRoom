@@ -1,0 +1,19 @@
+.containerMyNav {
+  /* width: 100%;
+  height: 100%; */
+  /* background-color: aqua; */
+  /* margin-left: 10%; */
+  padding: 0;
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.el-icon-location {
+  background: url("/public/favicon.ico") center center no-repeat;
+  background-size: 24px;
+}
+.el-icon-location::before {
+  content: "11";
+  visibility: hidden;
+}
